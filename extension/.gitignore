@@ -1,7 +1,7 @@
 # Environment variables
 .env
 *.env
-flashcard-backend/.env
+backend/.env
 
 # Python
 .venv/
@@ -9,5 +9,5 @@ venv/
 __pycache__/
 *.pyc
 
-# Other
+# Node
 node_modules/
