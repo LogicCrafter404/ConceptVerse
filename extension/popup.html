@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="popup.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Ambient Animated Background -->
+  <div class="ambient-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="glass-panel">
+    <img src="assets/concept verse icon.png" alt="Loading" class="cv-logo-spinner">
+    <h2 class="loading-text">CONCEPT<span>VERSE</span></h2>
+    <p>Initializing Learning Environment...</p>
+  </div>
+
+  <!-- Main UI -->
+  <div id="main-content" class="cv-container">
+
+    <!-- Header -->
+    <div class="cv-header">
+      <div class="brand-title-wrap">
+        <img src="assets/concept verse icon.png" class="header-logo" alt="Logo">
+        <div class="cv-brand">
+          <h1>CONCEPT<span>VERSE</span></h1>
+          <p>AI-Powered Learning Assistant</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="theme-toggle" class="icon-btn" title="Toggle Theme"><i class="fa-solid fa-moon"></i></button>
+        <button id="close-widget-btn" class="icon-btn close-btn" title="Close"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+
+    <!-- Selected Text -->
+    <div class="cv-captured-box glass-panel" id="captured-text">
+      Highlight text on a webpage and click the blue bubble...
+    </div>
+
+    <!-- Configuration -->
+    <div class="cv-config">
+
+      <div class="cv-style">
+        <label><i class="fa-solid fa-wand-magic-sparkles"></i> Analogy Style</label>
+        <div class="style-buttons">
+          <button class="style-btn active" data-style="cooking"><i class="fa-solid fa-fire-burner"></i> Cooking</button>
+          <button class="style-btn" data-style="gaming"><i class="fa-solid fa-gamepad"></i> Gaming</button>
+          <button class="style-btn" data-style="sports"><i class="fa-solid fa-basketball"></i> Sports</button>
+        </div>
+      </div>
+
+      <div class="cv-difficulty">
+        <label><i class="fa-solid fa-layer-group"></i> Difficulty</label>
+        <input type="range" id="difficulty-slider" class="slider" min="1" max="3" value="2">
+        <div class="slider-labels">
+          <span>BEGINNER</span>
+          <span style="text-align: center;">INTERMEDIATE</span>
+          <span>ADVANCED</span>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="build-btn" class="cv-build-btn">
+      <i class="fa-solid fa-bolt build-icon"></i> BUILD MY CONCEPT
+    </button>
+
+    <!-- Results -->
+    <div class="cv-results-stack" id="results-stack" style="display:none;">
+
+      <div class="cv-card card-blue glass-panel">
+        <h3>
+          <i class="fa-solid fa-brain result-icon"></i>
+          Simple Explanation
+        </h3>
+        <p id="res-explanation"></p>
+      </div>
+
+      <div class="cv-card card-purple glass-panel">
+        <h3>
+          <i class="fa-solid fa-link result-icon"></i>
+          <span id="res-analogy-type">COOKING</span><span class="analogy-word"> ANALOGY</span>
+        </h3>
+        <p id="res-analogy"></p>
+      </div>
+
+      <div class="cv-card card-green glass-panel">
+        <h3>
+          <i class="fa-solid fa-puzzle-piece result-icon"></i>
+          Mnemonic
+        </h3>
+        <p id="res-mnemonic"></p>
+      </div>
+
+      <div class="cv-card card-orange glass-panel">
+        <h3>
+          <i class="fa-solid fa-book-open result-icon"></i>
+          Exam Answer
+        </h3>
+        <p id="res-exam"></p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+
+</body>
+
+</html>
